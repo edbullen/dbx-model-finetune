@@ -1,4 +1,7 @@
+
 # MLflow LLM fine-tuning with synthetic data
+
+![mlflow_and_databricks](./doc/databricks_mlflow.png)
 
 Training demo for Databricks + MLflow with LLama 3.0 LLM.
 
@@ -9,6 +12,8 @@ Training demo for Databricks + MLflow with LLama 3.0 LLM.
 
 ### Details
 
+In **Notebook 1** we prepare some raw data by reading in PDF files from the ./data/ folder and creating the `splitted_documents` table data source.
+  
 In **Notebook 2** the function `build_instruction_eval_dataset()` generates an evaluation dataset containing Question, Answer and Context records using supplied LLM
 This function links multiple prompt templates into a Langchain chain which applies an LLM to the input Spark dataframe.
 
